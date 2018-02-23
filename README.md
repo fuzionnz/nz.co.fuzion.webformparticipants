@@ -13,6 +13,7 @@ This extension was written by Jitendra Purohit on behalf of [Fuzion](https://www
 - Able to select "is email confirm" without enabling online registration on Manage Event Page.
 - Names and location of all the event that were involved in Webform registration process.
 - Lists all the participants with event name and date on the email receipt sent to the contact.
+- Include Participant custom field value in the receipt if present.
 - If there is a contribution invoice attached to the mail, it will also include all names of the participants with event name and date.
 
 ## Configuration

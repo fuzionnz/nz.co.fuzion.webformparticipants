@@ -20,10 +20,10 @@ This extension was written by Jitendra Purohit on behalf of [Fuzion](https://www
 - For the point 2 mentioned above - this extension provides additional tokens `{$multiple_events}` and `{$multiple_locations}` which needs to be used in the default event_online_receipt template to print names and location of all the events that were involved in webform registration process.
 - A sample of the message template is included in the file "online_event_message_template.tpl" of the extension. It contains only the part which needs to be replaced with the below lines in the default Event Online message template to get all the event names in the mail.
 
-    <td colspan="2" {$valueStyle}>
-      {$event.event_title}<br />
-      {$event.event_start_date|date_format:"%A"} {$event.event_start_date|crmDate}{if $event.event_end_date}-{if $event.event_end_date|date_format:"%Y%m%d" == $event.event_start_date|date_format:"%Y%m%d"}{$event.event_end_date|crmDate:0:1}{else}{$event.event_end_date|date_format:"%A"} {$event.event_end_date|crmDate}{/if}{/if}
-    </td>
+       <td colspan="2" {$valueStyle}>
+         {$event.event_title}<br />
+         {$event.event_start_date|date_format:"%A"} {$event.event_start_date|crmDate}{if $event.event_end_date}-{if $event.event_end_date|date_format:"%Y%m%d" == $event.event_start_date|date_format:"%Y%m%d"}{$event.event_end_date|crmDate:0:1}{else}{$event.event_end_date|date_format:"%A"} {$event.event_end_date|crmDate}{/if}{/if}
+       </td>
 
 ### Contribute
 

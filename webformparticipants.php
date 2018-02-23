@@ -363,8 +363,8 @@ function webformparticipants_civicrm_alterMailParams(&$params, $context) {
       }
     }
     //To populate event custom group in mail.
-    if (empty($params['tplParams']['customGroup']) && !empty($params['tplParams']['participant']['customGroup'])) {
-      $params['tplParams']['customGroup'] = $params['tplParams']['participant']['customGroup'];
+    if (!empty($params['tplParams']['participant']['customGroup'])) {
+      $params['tplParams']['customGroup'] += $params['tplParams']['participant']['customGroup'];
       foreach ((array) $params['tplParams']['customGroup'] as $key => $cg) {
         if (is_array($cg)) {
           foreach ($cg as $k => $v) {
